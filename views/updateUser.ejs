@@ -1,0 +1,77 @@
+<!-- Include header file -->
+<%- include('partials/_header') -%>
+<!-- Include header file -->
+
+<main>
+    <div class="addUser-conatiner">
+        <%- include('partials/_updateButtons') -%>
+        <div class="new-user-container">
+             <h3>Update User</h3>
+             <p>Use the below form to update your account</p>
+        </div>
+        <div class="form-container">
+            <form method="PUT" action="/api/users" id="update-user-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" class="text-light">Name</label>
+                        <input type="hidden" name="id" value="<%=user._id%>">
+                        <input id="name" type="text" name="name" value="<%= user.name%>"placeholder="Name" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="surname" class="text-light">SurName</label>
+                        <input id="surname" type="text" name="surname" value="<%= user.surname%>" placeholder="SurName" class="form-input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="text-light">Email</label>
+                        <input id="email" name="email" type="email" value="<%= user.email%>" placeholder="email@gmail" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="text-light">Phone</label>
+                        <input id="phone" name="phone" type="text" value="<%= user.phone%>" placeholder="12334567890" class="form-input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group  form-group-radio">
+                        <label for="gender" class="text-light radio-label" >Gender</label>
+                        <div class="input-radio">
+                            <input name="gender" type="radio" value="Male" class="form-input" <%= user.gender == 'Male' ? 'checked':"" %> >
+                            <label for="gender">Male</label>
+                        </div>
+                        <div class="input-radio">
+                            <input name="gender" type="radio" value="Female" class="form-input" <%= user.gender == 'Female' ? 'checked':"" %>  >
+                            <label for="gender">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group  form-group-radio">
+                        <label for="status"  class="text-light radio-label">Status</label>
+                        <div class="input-radio">
+                            <input name="status" type="radio" value="Active" class="form-input" <%= user.status == 'Active' ? 'checked':"" %> >
+                            <label for="status">Active</label>
+                        </div>
+                        <div class="input-radio">
+                            <input name="status" type="radio" value="Inactive" class="form-input"  <%= user.status == 'Inactive' ? 'checked':"" %>>
+                            <label for="status">Inactive</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-comments">
+                    <label for="status" class="text-light">Comments</label>
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="write down the comments" class="form-input"
+                        value="<%= user.comments %>">
+                
+                    </textarea>
+                </div>
+                <div class="form-group form-submit">
+                    <button type="submit" class="form-submit-button">Save</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</main>
+
+<!-- Include footer file -->
+<%- include('partials/_footer') -%>
+<!-- Include footer file -->

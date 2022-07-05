@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Open+Sans&family=PT+Sans&display=swap');
+main{
+    width:80%;
+    margin: auto;
+    margin-top: 40px;
+    font-family: 'Open Sans', sans-serif;
+}
+.UserAdd-section{
+    display: flex;
+    justify-content: space-between;
+
+}
+.UserAdd-button button{
+    color: white;
+    padding: 8px 10px;
+    border: 1px solid white;
+    border-radius: 3px;
+    background-color: black;
+}
+.UserAdd-button button:hover{
+    background-color: var(--hover);
+}
+.Users-heading{
+    font-size: 25px;
+    font-weight:800;
+}
+.add-user{
+    color:white;
+}
+.form-div{
+    padding:20px 0px;
+}
+table{
+    width: 100%;
+    max-height: 1200px;
+    border-collapse: collapse;
+    overflow-x:auto;
+    overflow-y:auto;
+}
+tr,th,td{
+    text-align: left;
+    padding:7px 0;
+    padding-left:6px;
+    border:1px solid rgb(185, 184, 184);
+    margin: 0;
+    font-size: 0.9rem;
+}
+thead{
+    background-color: black;
+    color:white;
+}
+.info-table-head,th{
+    border: 1px solid black;
+}
+.info-row .btn-action{
+    color:black;
+}
+.info-row:hover{
+    background-color: var(--hover);
+    border:1px solid rgb(48, 116, 110); 
+    color:white;
+}
+.info-row:hover .btn-action,.info-row:hover .btn-action i,.info-row:hover .btn-action i >span{
+  color:white;
+}
+.info-row:hover td{
+    border:1px solid rgb(48, 116, 110);
+}
+.info-row:hover .btn-action:hover,.info-row:hover .btn-action:hover i{
+   color:rgb(7, 56, 35);
+}
+.id{
+    font-weight: bold;
+}
+.action-row{
+    padding-left: 0px;
+}
+.action-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn-delete{
+    cursor: pointer;
+}
+.btn-action a span{
+    color:black;
+}
+.btn-action i{
+    color:black;
+    margin-right:5px;
+}

@@ -1,0 +1,25 @@
+<%  for(var i=0;i<users.length;i++){ %>
+
+  <tr class="info-row">
+    <td class="id"><%= i+1%></td>
+    <td class="name"><%= users[i].name%></td>
+    <td class="email"><%= users[i].email%></td>
+    <td class="phone"><%= users[i].phone%></td>
+    <td class="gender"><%= users[i].gender%></td>
+    <td class="status"><%= users[i].status%></td>
+    <td class="action-row">
+        <div class="action-div">
+            <a href="#" class="btn-action btn-view">
+                <i class="fa-solid fa-eye"></i>view
+            </a>
+            <a href="/update_user?id=<%= users[i]._id%>" class="btn-action btn-update">
+                <i class="fa-solid fa-pencil"></i>update
+            </a>
+            <a class="btn-action btn-delete" data-id="<%= users[i]._id%>" >
+                <i class="fa-solid fa-user-xmark"></i>delete
+            </a>
+        </div>
+    </td>
+</tr>
+
+<%} %>

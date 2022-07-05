@@ -1,0 +1,38 @@
+<!-- Include header file -->
+<%- include('partials/_header') -%>
+<!-- Include header file -->
+    <main class="mainapp-section">
+        <div class="UserAdd-section">
+            <div class="Users-heading">
+                <span>Users</span>
+            </div>
+            <div class="UserAdd-button">
+                <button><a href="/add_user" class="add-user"><i class="fa-light fa-plus"></i> add user</a></button>
+            </div>
+        </div>
+        <div class="form-div">
+            <form action="/" method="POST">
+               <table>
+                   <thead>
+                        <tr class="info-table-head">
+                            <th class="id">ID</th>
+                            <th class="name">Name</th>
+                            <th class="email">Email</th>
+                            <th class="phone">Phone</th>
+                            <th class="gender">Gender</th>
+                            <th class="status">Status</th>
+                            <th class="action">Action</th>
+                        </tr>
+                   </thead>
+                   <tbody>
+                        <%- include('partials/_showUsers') -%>
+                   </tbody>
+               </table>
+            </form>
+        </div>
+    </main>
+
+<!-- Include footer file -->
+<%- include('partials/_footer') -%>
+<!-- Include footer file -->
+
